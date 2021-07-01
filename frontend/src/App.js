@@ -1,10 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Nav from './components/NavBar';
+import Footer from './components/Footer';
+import MyMovies from './components/MyMovies';
+import AboutUs from './components/AboutUs';
+import ContactUs from './components/ContactUs';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,7 +22,33 @@ function App() {
         >
           Learn React
         </a>
-      </header>
+      </header> */}
+      <Router>
+        <Nav />
+        <Switch>
+
+          <Route path="/" exact>
+            <AboutUs />
+          </Route>
+
+
+          <Route path="/MyMovies">
+            <MyMovies />
+          </Route>
+
+
+          <Route path="/MovieFinder">
+            <MovieFinderPage />
+           </Route>
+
+          <Route path="/ContactUs">
+            <ContactUs />
+          </Route>
+
+        </Switch>
+
+        <Footer />
+      </Router>
     </div>
   );
 }

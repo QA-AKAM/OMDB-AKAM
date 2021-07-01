@@ -1,7 +1,8 @@
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from './components/NavBar';
 import Footer from './components/Footer';
+import AboutUs from './components/AboutUs';
 function App() {
   return (
     <div className="App">
@@ -21,11 +22,11 @@ function App() {
       </header> */}
       <Router>
         <Nav />
-        {/* <Switch>
+        <Switch>
           <Route path="/" exact>
-            <HomeRoute />
+            <AboutUs />
           </Route>
-
+          {/*
           <Route path="/about">
             <About />
           </Route>
@@ -37,8 +38,8 @@ function App() {
           <Route path="/character/:id">
             <Character />
           </Route>
-
-        </Switch> */}
+*/}
+        </Switch>
         <Footer />
       </Router>
     </div>

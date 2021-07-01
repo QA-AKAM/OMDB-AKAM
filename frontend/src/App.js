@@ -2,8 +2,12 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from './components/NavBar';
 import Footer from './components/Footer';
+import MyMovies from './components/MyMovies';
+import MovieFinderPage from './Components/MovieFinderPage';
+import { Switch, Route } from 'react-router-dom';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
+
 function App() {
   return (
     <div className="App">
@@ -24,23 +28,27 @@ function App() {
       <Router>
         <Nav />
         <Switch>
+
           <Route path="/" exact>
             <AboutUs />
           </Route>
-          {/*
-          <Route path="/about">
-            <About />
+
+
+          <Route path="/MyMovies">
+            <MyMovies />
           </Route>
 
-          <Route path="/contact">
-            <ContactRoute />
-          </Route>
-*/}
+
+          <Route path="/MovieFinder">
+            <MovieFinderPage />
+           </Route>
+
           <Route path="/ContactUs">
             <ContactUs />
           </Route>
 
         </Switch>
+
         <Footer />
       </Router>
     </div>

@@ -1,22 +1,23 @@
-// npm init -y
-// npm express mongoose
-
-//express server
 const express = require('express');
+const cors = require('cors');
+const app = express();
+
 const PORT = 5000;
+
+app.use(cors());
 
 //mongodb
 const mongoose = require('mongoose');
 
 //get routes
-// const routes = require('./routes');
+const routes = require('./Routes');
 
 //Connect to MongoDB database
-mongoose.connect("mongodb://localhost/products", { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect("mongodb://localhost/movies", { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
-        const app = express();
-        // app.use(express.json());
-        // app.use('/api', routes);
+
+        app.use(express.json());
+        app.use(routes);
 
         app.listen(PORT, () => {
             console.log(`App running at: ${PORT}`);

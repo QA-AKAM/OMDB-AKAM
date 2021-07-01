@@ -2,7 +2,10 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from './components/NavBar';
 import Footer from './components/Footer';
+import MyMovies from './components/MyMovies';
+import { Switch, Route } from 'react-router-dom';
 import AboutUs from './components/AboutUs';
+
 function App() {
   return (
     <div className="App">
@@ -23,23 +26,28 @@ function App() {
       <Router>
         <Nav />
         <Switch>
+
           <Route path="/" exact>
             <AboutUs />
           </Route>
           {/*
           <Route path="/about">
+
             <About />
+          </Route> */}
+
+          <Route path="/MyMovies">
+            <MyMovies />
           </Route>
 
-          <Route path="/contact">
-            <ContactRoute />
-          </Route>
 
-          <Route path="/character/:id">
+          {/* <Route path="/character/:id">
             <Character />
+
           </Route>
 */}
         </Switch>
+
         <Footer />
       </Router>
     </div>

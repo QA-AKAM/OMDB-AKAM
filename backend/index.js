@@ -1,9 +1,10 @@
-// npm init -y
-// npm express mongoose
-
-//express server
 const express = require('express');
+const cors = require('cors');
+const app = express();
+
 const PORT = 5000;
+
+app.use(cors());
 
 //mongodb
 const mongoose = require('mongoose');
@@ -14,7 +15,7 @@ const routes = require('./Routes');
 //Connect to MongoDB database
 mongoose.connect("mongodb://localhost/movies", { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
-        const app = express();
+
         app.use(express.json());
         app.use(routes);
 

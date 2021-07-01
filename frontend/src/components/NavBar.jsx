@@ -1,7 +1,7 @@
 'use strict';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 
 const NavBar = () => {
     return (
@@ -20,7 +20,7 @@ const NavBar = () => {
                     <Nav className="me-auto">
                         <Nav.Link href="#About Us">About Us</Nav.Link>
                         <Nav.Link href="#Movies">Movies</Nav.Link>
-                        <Nav.Link href="#My Movies">My Movies</Nav.Link>
+                        <Nav.Link href="/MyMovies">MyMovies</Nav.Link>
                         <Nav.Link href="#Contact Us">Contact Us</Nav.Link>
 
                     </Nav>

@@ -18,10 +18,10 @@ const NavBar = () => {
                         />{' '}
                         AKAM CINEMA</Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link href="#About Us">About Us</Nav.Link>
+                        <Nav.Link href="/">About Us</Nav.Link>
                         <Nav.Link href="#Movies">Movies</Nav.Link>
                         <Nav.Link href="#My Movies">My Movies</Nav.Link>
-                        <Nav.Link href="#Contact Us">Contact Us</Nav.Link>
+                        <Nav.Link href="/ContactUs">Contact Us</Nav.Link>
 
                     </Nav>
                 </Container>

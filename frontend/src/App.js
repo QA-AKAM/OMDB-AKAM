@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from './components/NavBar';
 import Footer from './components/Footer';
 import AboutUs from './components/AboutUs';
+import ContactUs from './components/ContactUs';
 function App() {
   return (
     <div className="App">
@@ -34,11 +35,11 @@ function App() {
           <Route path="/contact">
             <ContactRoute />
           </Route>
-
-          <Route path="/character/:id">
-            <Character />
-          </Route>
 */}
+          <Route path="/ContactUs">
+            <ContactUs />
+          </Route>
+
         </Switch>
         <Footer />
       </Router>

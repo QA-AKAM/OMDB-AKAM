@@ -4,6 +4,7 @@ import Nav from './components/NavBar';
 import Footer from './components/Footer';
 import MyMovies from './components/MyMovies';
 import AboutUs from './components/AboutUs';
+import ContactUs from './components/ContactUs';
 
 function App() {
   return (
@@ -29,22 +30,21 @@ function App() {
           <Route path="/" exact>
             <AboutUs />
           </Route>
-          {/*
-          <Route path="/about">
 
-            <About />
-          </Route> */}
 
           <Route path="/MyMovies">
             <MyMovies />
           </Route>
 
 
-          {/* <Route path="/character/:id">
-            <Character />
+          <Route path="/MovieFinder">
+            <MovieFinderPage />
+           </Route>
 
+          <Route path="/ContactUs">
+            <ContactUs />
           </Route>
-*/}
+
         </Switch>
 
         <Footer />

@@ -36,7 +36,7 @@ const MyMovies = () => {
                         : <div>
                             {moviesList.map(movie => (
                                 <div className="card">
-                                    <img src={movie.imageUrl} alt="movie poster" />
+                                    <img src={movie.imageUrl} width={200} height={400} alt="movie poster" />
                                     <h4>{movie.title}</h4>
                                     <p>{movie.year}</p>
                                     <p>{movie.genre}</p>

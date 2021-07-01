@@ -3,8 +3,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from './components/NavBar';
 import Footer from './components/Footer';
 import MyMovies from './components/MyMovies';
-import MovieFinderPage from './Components/MovieFinderPage';
-import { Switch, Route } from 'react-router-dom';
 import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 

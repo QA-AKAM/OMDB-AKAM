@@ -6,6 +6,7 @@ import MyMovies from './components/MyMovies';
 import MovieFinderPage from './Components/MovieFinderPage';
 import { Switch, Route } from 'react-router-dom';
 import AboutUs from './components/AboutUs';
+import ContactUs from './components/ContactUs';
 
 function App() {
   return (
@@ -31,26 +32,21 @@ function App() {
           <Route path="/" exact>
             <AboutUs />
           </Route>
-          {/*
-          <Route path="/about">
 
-            <About />
-          </Route> */}
 
           <Route path="/MyMovies">
             <MyMovies />
           </Route>
 
+
           <Route path="/MovieFinder">
             <MovieFinderPage />
            </Route>
 
-
-          {/* <Route path="/character/:id">
-            <Character />
-
+          <Route path="/ContactUs">
+            <ContactUs />
           </Route>
-*/}
+
         </Switch>
 
         <Footer />

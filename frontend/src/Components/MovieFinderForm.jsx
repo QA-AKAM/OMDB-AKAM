@@ -7,7 +7,8 @@ const MovieFinderForm = ({ findMovieProp }) => {
 
     const submitHandler = (e) => {
         e.preventDefault();
-        findMovieProp({ title, year });
+        console.log([title, year]);
+        findMovieProp([title, year]);
     }
 
     return (

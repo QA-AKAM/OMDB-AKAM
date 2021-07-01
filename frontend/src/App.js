@@ -1,10 +1,10 @@
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Nav from './components/NavBar';
 import Footer from './components/Footer';
 import MyMovies from './components/MyMovies';
 import { Switch, Route } from 'react-router-dom';
-
+import AboutUs from './components/AboutUs';
 
 function App() {
   return (
@@ -26,11 +26,13 @@ function App() {
       <Router>
         <Nav />
         <Switch>
-          {/* <Route path="/" exact>
-            <HomeRoute />
-          </Route> */}
 
-          {/* <Route path="/about">
+          <Route path="/" exact>
+            <AboutUs />
+          </Route>
+          {/*
+          <Route path="/about">
+
             <About />
           </Route> */}
 
@@ -41,8 +43,9 @@ function App() {
 
           {/* <Route path="/character/:id">
             <Character />
-          </Route> */}
 
+          </Route>
+*/}
         </Switch>
 
         <Footer />
